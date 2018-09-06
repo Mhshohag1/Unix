@@ -1,32 +1,61 @@
-# Prerequisites
-*.d
+#include <iostream>
+#include<string> //needed to use string
+#include<cstdlib> //needed to use exit function
+using namespace std;
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+int main()
+{
+	string user;
+	cout << "Please enter a unix command and i'll give you a brief about it : ";
+	cin >> user; //hold the user input
+	while (user != "quit") {
+		if (user=="cat")
+		{
+			cout << user << " :concatenate or display files.\n";
+		}
+		else if (user == "cp")
+		{
+			cout << user << " : copy files.\n";
+		}
+		else if (user == "ls")
+		{
+			cout << user << " : list file names.\n";
+		}
+		else if (user == "ls-l")
+		{
+			cout << user << " : list file names,sizes,attributes.\n";
+		}
+		else if (user == "mv")
+		{
+			cout << user << " : move or rename files.\n";
+		}
+		else if (user == "rm")
+		{
+			cout << user << " : remove files.\n";
+		}
+		else if (user == "diff")
+		{
+			cout << user << " : compare two files.\n";
+		}
+		else if (user == "fmt")
+		{
+			cout << user << " : simple line adjuter for mail.\n";
+		}
 
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+		else if (user == "quit")
+		{
+			exit(0);
+		}
+		else
+		{
+			cout << "I'm sorry " << user << " is out of my database.\n";
+		}
+		cout << "\nEnter another command or quit for stop this program : ";
+		cin >> user;
+	}
+	
+	
+	int a;
+	cin >> a;
+	return 0;
+}
